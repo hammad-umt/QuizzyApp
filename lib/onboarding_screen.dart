@@ -1,3 +1,5 @@
+// ignore_for_file: sort_child_properties_last, deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:quizzy/login_screen.dart';
 import 'package:quizzy/signup_screen.dart';
@@ -13,17 +15,17 @@ class OnboardingScreen extends StatelessWidget {
         children: [
           Image.asset('assets/images/user.png', width: 500, height: 400),
           const SizedBox(height: 100),
-          Text(
+          const Text(
             "Welcome to Quizzy!,\nChallenge Your Knowledge, Anytime, Anywhere.",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
-              color: const Color(0xFF1F41BB),
+              color: Color(0xFF1F41BB),
             ),
           ),
-          SizedBox(height: 30),
-          Text(
+          const SizedBox(height: 30),
+          const Text(
             "Log in to test your skills with fun quizzes.\nLearn, compete, and grow smarter!",
             textAlign: TextAlign.center,
           ),
@@ -38,10 +40,10 @@ class OnboardingScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                      MaterialPageRoute(builder: (context) => const LoginScreen()),
                     );
                   },
-                  child: Text('Login'),
+                  child: const Text('Login'),
                   style: ButtonStyle(
                     backgroundColor:
                         MaterialStateProperty.all(const Color(0xFF1F41BB)),
@@ -62,10 +64,10 @@ class OnboardingScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SignupScreen()),
+                      MaterialPageRoute(builder: (context) => const SignupScreen()),
                     );
                   },
-                  child: Text('Get Started'),
+                  child: const Text('Get Started'),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                     foregroundColor:
