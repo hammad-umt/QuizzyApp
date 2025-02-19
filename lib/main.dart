@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:quizzy/onboarding_screen.dart'; // Your onboarding screen import
-import 'firebase_options.dart'; // Make sure this is generated correctly
+import 'package:provider/provider.dart';
+import 'firebase_options.dart';
+import 'quiz_provider.dart';
+import 'screens/onboarding_screen.dart';
 
 void main() async {
-  // Ensures Flutter is fully initialized before calling async code
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Initialize Firebase
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions
-        .currentPlatform, // Ensure correct Firebase options are used
+    options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // Run the app after Firebase initialization is complete
   runApp(const MyApp());
 }
 
@@ -22,13 +19,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ChangeNotifierProvider(
+      create: (context) => QuizProvider(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Quiz App',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: const OnboardingScreen(), // Start with Onboarding
       ),
-      home: const OnboardingScreen(), // Your onboarding screen here
     );
   }
 }
