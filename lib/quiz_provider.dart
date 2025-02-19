@@ -19,7 +19,7 @@ class QuizProvider with ChangeNotifier {
   bool get quizCompleted => _quizCompleted;
 
   Future<void> fetchQuestions(String topic) async {
-    const String apiKey = 'AIzaSyAguRXb6_MbyQhxxrzKCWtJ2iLbL5PNnvM';
+    const String apiKey = 'Your Api Key Here';
     const String apiUrl =
         'https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=$apiKey';
 
