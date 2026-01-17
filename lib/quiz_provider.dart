@@ -32,7 +32,7 @@ class QuizProvider with ChangeNotifier {
   bool get timeOut => _timeOut;
 
   Future<void> fetchQuestions(String topic) async {
-    const String apiKey = 'AIzaSyDbp_Nd9GH6KEzNEEWvmG4GgI3jD26TEU0';
+    const String apiKey = 'AIzaSyCxpUMNHmheX-cAoix1IP4f3MTBsp3WUQI';
     const String apiUrl =
         'https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=$apiKey';
 

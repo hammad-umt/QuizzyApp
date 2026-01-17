@@ -957,19 +957,19 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   },
                   icon: const Icon(Icons.info, color: AppColors.primary),
                   label: const Text(
-                    'About Me',
+                    'About Us',
                     style: TextStyle(color: AppColors.primary),
                   ),
                 ),
                 const SizedBox(height: 8),
-                TextButton.icon(
-                  onPressed: () => _showLogoutDialog(context, dialogContext),
-                  icon: const Icon(Icons.logout, color: Colors.red),
-                  label: const Text(
-                    'Logout',
-                    style: TextStyle(color: Colors.red),
-                  ),
-                ),
+                // TextButton.icon(
+                //   onPressed: () => _showLogoutDialog(context, dialogContext),
+                //   icon: const Icon(Icons.logout, color: Colors.red),
+                //   label: const Text(
+                //     'Logout',
+                //     style: TextStyle(color: Colors.red),
+                //   ),
+                // ),
               ],
             ),
           ),

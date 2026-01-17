@@ -37,7 +37,7 @@ class _AboutMeScreenState extends State<AboutMeScreen> with SingleTickerProvider
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'About Me',
+          'About Us',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22,
