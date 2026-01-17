@@ -29,4 +29,12 @@ class firebaseAuth {
       return null;
     }
   }
+
+  Future<void> logout() async {
+    try {
+      await _auth.signOut();
+    } catch (e) {
+      print(e.toString());
+    }
+  }
 }

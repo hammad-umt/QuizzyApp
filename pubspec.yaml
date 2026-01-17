@@ -1,5 +1,5 @@
-name: quizzy
-description: "A new Flutter project."
+name: masteryquiz
+description: "MasteryQuiz - Master Pakistani education boards with comprehensive quizzes. Coverage of FBISE and all BISE boards for Science, Arts, and Commerce streams."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -35,9 +35,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  firebase_core: ^3.10.0
-  cloud_firestore: ^5.6.1
-  firebase_auth: ^5.4.0
+  firebase_core: ^4.3.0
+  cloud_firestore: ^6.1.1
+  firebase_auth: ^6.1.3
+  firebase_messaging: ^16.1.0
+  flutter_local_notifications: ^17.2.2
   provider: ^6.1.2
   http: ^1.3.0
 
@@ -50,7 +52,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^4.0.0
+  flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
